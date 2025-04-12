@@ -32,10 +32,6 @@ public class OrderController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
-    @PostMapping("/")
-    public ResponseEntity<Order> addANewOrder(@RequestBody Order order) {
-        return new ResponseEntity<>(service.createANewOrder(order), HttpStatus.CREATED);
-    }
 
     @PutMapping("/{orderId}")
     public ResponseEntity<Order> updateOrderDetails(@PathVariable int orderId, @RequestBody Order order) {

@@ -11,9 +11,11 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int orderId;
-    private int itemId;
-    private double totalPrice;
+    private int productId;
+    private int quantity;
+    private String status;
     private Date orderDate;
+    private double totalPrice;
 
     public int getOrderId() {
         return orderId;
@@ -23,20 +25,28 @@ public class Order {
         this.orderId = orderId;
     }
 
-    public int getItemId() {
-        return itemId;
+    public int getProductId() {
+        return productId;
     }
 
-    public void setItemId(int itemId) {
-        this.itemId = itemId;
+    public void setProductId(int productId) {
+        this.productId = productId;
     }
 
-    public double getTotalPrice() {
-        return totalPrice;
+    public int getQuantity() {
+        return quantity;
     }
 
-    public void setTotalPrice(double totalPrice) {
-        this.totalPrice = totalPrice;
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public Date getOrderDate() {
@@ -45,5 +55,13 @@ public class Order {
 
     public void setOrderDate(Date orderDate) {
         this.orderDate = orderDate;
+    }
+
+    public double getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(double totalPrice) {
+        this.totalPrice = totalPrice;
     }
 }

@@ -12,7 +12,6 @@ public class Inventory {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private int productId;
-    private int itemId;
     private int quantity;
 
     public int getId() {
@@ -29,14 +28,6 @@ public class Inventory {
 
     public void setProductId(int productId) {
         this.productId = productId;
-    }
-
-    public int getItemId() {
-        return itemId;
-    }
-
-    public void setItemId(int itemId) {
-        this.itemId = itemId;
     }
 
     public int getQuantity() {

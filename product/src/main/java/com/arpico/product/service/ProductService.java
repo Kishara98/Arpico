@@ -26,6 +26,8 @@ public class ProductService {
     }
 
     public Product createANewProduct(Product product) {
+        // we need to add this product to default inventory
+
          return repository.save(product);
     }
 
@@ -35,6 +37,7 @@ public class ProductService {
             Product existingProductDetails = existingProduct.get();
             existingProductDetails.setProductName(product.getProductName());
             existingProductDetails.setDescription(product.getDescription());
+            existingProductDetails.setPrice(product.getPrice());
             existingProductDetails.setForSale(product.getForSale());
 
             return repository.save(existingProductDetails);

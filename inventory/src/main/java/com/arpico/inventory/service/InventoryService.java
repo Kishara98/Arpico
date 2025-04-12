@@ -33,7 +33,6 @@ public class InventoryService {
        if(existingInventory.isPresent()) {
            Inventory inventoryData = existingInventory.get();
            inventoryData.setProductId(inventory.getProductId());
-           inventoryData.setItemId(inventory.getItemId());
            inventoryData.setQuantity(inventory.getQuantity());
            return repository.save(inventoryData);
        } else {
@@ -49,4 +48,5 @@ public class InventoryService {
             throw new RuntimeException("Inventory not found with ID: " + id);
         }
     }
+
 }

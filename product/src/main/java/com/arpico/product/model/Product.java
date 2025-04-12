@@ -14,6 +14,7 @@ public class Product {
 
     private String productName;
     private String description;
+    private double price;
     private boolean forSale;
 
     public int getId() {
@@ -38,6 +39,14 @@ public class Product {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     public boolean getForSale() {
